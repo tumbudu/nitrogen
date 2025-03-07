@@ -24,7 +24,7 @@ home=`pwd`
 # stupid.
 mkdir -p /tmp/nitrogen
 cd /tmp
-git clone git://github.com/nitrogen/nitrogen
+git clone https://github.com/nitrogen/nitrogen
 cd nitrogen
 ## The generated release doesn't need anything more, and slim_inets has the
 ## fewest dependencies to build and fetch (since dependencies don't do anything

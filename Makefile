@@ -59,11 +59,11 @@ install-vim-script:
 thanks: 
 	@(cd support/list_thanks; \
 	rm -fr simple_bridge nprocreg nitrogen_core NitrogenProject.com; \
-	git clone git://github.com/nitrogen/simple_bridge; \
-	git clone git://github.com/nitrogen/nprocreg; \
-	git clone git://github.com/nitrogen/nitrogen_core; \
-	git clone git://github.com/nitrogen/NitrogenProject.com; \
-	git clone git://github.com/nitrogen/rekt; \
+	git clone https://github.com/nitrogen/simple_bridge; \
+	git clone https://github.com/nitrogen/nprocreg; \
+	git clone https://github.com/nitrogen/nitrogen_core; \
+	git clone https://github.com/nitrogen/NitrogenProject.com; \
+	git clone https://github.com/nitrogen/rekt; \
 	perl list_thanks.pl >> ../../thanks.txt; \
 	rm -fr simple_bridge nprocreg nitrogen_core NitrogenProject.com; \
 	echo "Thanks file generated in thanks.txt - please review")
@@ -347,7 +347,7 @@ replace_project_name:
 rel_copy_quickstart:
 	mkdir -p deps
 	(rm -fr deps/NitrogenProject.com)
-	(cd deps; git clone -b ws git://github.com/nitrogen/NitrogenProject.com.git)
+	(cd deps; git clone -b ws https://github.com/nitrogen/NitrogenProject.com.git)
 	cp -R deps/NitrogenProject.com/src/* "$(PREFIX)/$(PROJECT)/site/src"
 	cp -R deps/NitrogenProject.com/static/* "$(PREFIX)/$(PROJECT)/site/static"
 	cp -R deps/NitrogenProject.com/templates/* "$(PREFIX)/$(PROJECT)/site/templates"
